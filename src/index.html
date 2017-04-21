@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Angular Stack Setup</title>
-    <!-- inject:js -->
-    <!-- endinject -->
-    <!-- inject:css -->
-    <!-- endinject -->
-  </head>
-  <body>
-  </body>
+<html ng-app="droneApp">
+<head>
+  <base href="/">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMBRc7S-fUkCbXazZbh-E06kbFfZFk-MQ&libraries=places,geometry"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Montserrat:400,700,900" rel="stylesheet">
+  <title>Project 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <!-- <script src="js/lib/angular-animate.js" charset="utf-8"></script> -->
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+
+
+</head>
+<body ng-controller="MainCtrl as main">
+  <nav>
+    <div class="gradient">
+    <div class="pageName">
+      <h1>App<span id="drone">Drone</span>.</h1>
+    </div>
+    <div class="links">
+      <ul>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="droneIndex" ui-sref-active="active">Drone</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="userIndex" ui-sref-active="active">Users</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="raceIndex" ui-sref-active="active">Race</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="userShow({ id: main.currentUser.id })" ui-sref-active="active">Profile</a></li>
+        <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
+        <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
+        <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <main ui-view class="container"></main>
+</body>
 </html>

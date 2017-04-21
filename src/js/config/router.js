@@ -7,6 +7,10 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
   $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'js/views/static/home.html'
+    })
     .state('register', {
       url: '/register',
       templateUrl: 'js/views/auth/register.html',
@@ -18,44 +22,59 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: 'LoginCtrl as login'
     })
     .state('droneIndex', {
-      url: '/drone',
+      url: '/drones',
       templateUrl: 'js/views/drones/index.html',
       controller: 'DronesIndexCtrl as dronesIndex'
     })
     .state('droneNew', {
-      url: '/drone/new',
+      url: '/drones/new',
       templateUrl: 'js/views/drones/new.html',
       controller: 'DronesNewCtrl as dronesNew'
     })
     .state('droneShow', {
-      url: '/drone/:id',
+      url: '/drones/:id',
       templateUrl: 'js/views/drones/show.html',
       controller: 'DronesShowCtrl as dronesShow'
     })
     .state('droneEdit', {
-      url: '/drone/:id/edit',
+      url: '/drones/:id/edit',
       templateUrl: 'js/views/drones/edit.html',
       controller: 'DronesEditCtrl as dronesEdit'
     })
     .state('userIndex', {
       url: '/users',
-      templateUrl: 'js/views/user/index.html',
+      templateUrl: 'js/views/users/index.html',
       controller: 'UserIndexCtrl as usersIndex'
     })
     .state('userShow', {
       url: '/users/:id',
-      templateUrl: 'js/views/user/show.html',
+      templateUrl: 'js/views/users/show.html',
       controller: 'UserShowCtrl as usersShow'
     })
+    .state('userEdit', {
+      url: '/users/:id/edit',
+      templateUrl: 'js/views/user/edit.html',
+      controller: 'UserEditCtrl as userEdit'
+    })
     .state('raceIndex', {
-      url: '/race',
-      templateUrl: 'js/views/race/index.html',
-      controller: 'RaceIndexCtrl as raceIndex'
+      url: '/races',
+      templateUrl: 'js/views/races/index.html',
+      controller: 'RacesIndexCtrl as racesIndex'
+    })
+    .state('raceNew', {
+      url: '/races/new',
+      templateUrl: 'js/views/races/new.html',
+      controller: 'RacesNewCtrl as racesNew'
     })
     .state('raceShow', {
-      url: '/race/:id',
-      templateUrl: 'js/views/race/show.html',
-      controller: 'RaceShowCtrl as raceShow'
+      url: '/races/:id',
+      templateUrl: 'js/views/races/show.html',
+      controller: 'RacesShowCtrl as racesShow'
+    })
+    .state('raceEdit', {
+      url: '/races/:id/edit',
+      templateUrl: 'js/views/races/edit.html',
+      controller: 'RacesEditCtrl as racesEdit'
     });
 
   $urlRouterProvider.otherwise('/');

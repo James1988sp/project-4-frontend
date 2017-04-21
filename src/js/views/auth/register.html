@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-6">
+    <form ng-submit="register.submit()">
+      <div>
+        <label for="name">Name</label>
+        <input  name="name" type="text" ng-model="register.user.name">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input  name="email" type="text" ng-model="register.user.email">
+      </div>
+      <div>
+        <label for="nationality">Nationality</label>
+        <input  name="nationality" type="text" ng-model="register.user.nationality">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input  name="password" type="password" ng-model="register.user.password">
+      </div>
+
+      <div>
+        <label for="password confirmation">Password Confirmation</label>
+        <input  name="password confirmation" type="password" ng-model="register.user.password_confirmation">
+      </div>
+
+      <button>Register</button>
+    </form>
+  </div>
+</div>

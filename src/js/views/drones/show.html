@@ -1,0 +1,11 @@
+<img ng-src="{{ dronesShow.drone.photo }}">
+<h2>Name:{{ dronesShow.drone.name }}</h2>
+<h3>Speed:{{ dronesShow.drone.speed }}km/h</h3>
+<h3>Skills:{{ dronesShow.drone.skills }}</h3>
+<p><strong>Price:{{ dronesShow.drone.price }}£</strong>
+<p><strong>Weight:{{ dronesShow.drone.weight }}kg
+<br>
+<br><a ui-sref="droneEdit({ id: dronesShow.drone.id })" class="btn btn-primary">Edit</a>
+
+<br>
+<br><button ng-click="dronesShow.delete()" class="btn btn-danger">Delete</button>

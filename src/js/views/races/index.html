@@ -1,0 +1,12 @@
+<ul class="row">
+  <div id="map" data-race="<%= JSON.stringify(race) %>"></div>
+  <li ng-repeat="race in racesIndex.all" class="col-md-6">
+    <div class="race">
+      <h2>{{ race.name }}<h2>
+      <h3>{{ race.location }}</h3>
+      <h4>{{ race.date | date: 'longDate' }}</h4>
+      <p>Created by: <strong>{{ race.user.name }}</strong></p>
+      <button ui-sref="raceShow({id: race.id})">View</button>
+    </div>
+  </li>
+</ul>
