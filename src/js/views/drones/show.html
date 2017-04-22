@@ -1,9 +1,10 @@
-<img ng-src="{{ dronesShow.drone.photo }}">
-<h2>Name:{{ dronesShow.drone.name }}</h2>
+<h1><span>Drone</span></h1>
+<img ng-src="{{ dronesShow.drone.photo_src }}">
+<h2><span>Name:{{ dronesShow.drone.name }}</span></h2>
 <h3>Speed:{{ dronesShow.drone.speed }}km/h</h3>
 <h3>Skills:{{ dronesShow.drone.skills }}</h3>
-<p><strong>Price:{{ dronesShow.drone.price }}£</strong>
-<p><strong>Weight:{{ dronesShow.drone.weight }}kg
+<p><strong>Price:{{ dronesShow.drone.price }}£</strong></p>
+<p><strong>Weight:{{ dronesShow.drone.weight }}kg</strong></p>
 <br>
 <br><a ui-sref="droneEdit({ id: dronesShow.drone.id })" class="btn btn-primary">Edit</a>
 

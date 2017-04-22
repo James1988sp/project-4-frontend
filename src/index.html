@@ -11,8 +11,6 @@
   <!-- endinject -->
   <!-- inject:css -->
   <!-- endinject -->
-
-
 </head>
 <body ng-controller="MainCtrl as main">
   <nav>
@@ -22,7 +20,7 @@
     </div>
     <div class="links">
       <ul>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="droneIndex" ui-sref-active="active">Drone</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="droneIndex" ui-sref-active="active">Drones</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="userIndex" ui-sref-active="active">Users</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="raceIndex" ui-sref-active="active">Race</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="userShow({ id: main.currentUser.id })" ui-sref-active="active">Profile</a></li>

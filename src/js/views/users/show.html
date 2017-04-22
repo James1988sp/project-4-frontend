@@ -1,3 +1,4 @@
+<h1><span>Your</span><span>Profile</span></h1>
 <div class="row">
   <div class="col-md-4">
     <img src="{{ usersShow.user.photo }}">
@@ -6,7 +7,7 @@
   </div>
 
   <div class="col-md-8">
-    <h1>{{ usersShow.user.name }}'s Drones</h1>
+    <h1>{{ usersShow.user.name }}<span>'s Drones</span></h1>
     <ul>
       <li ng-repeat="drone in usersShow.user.drones"><a ui-sref="droneShow({ id: drone.id })">{{ drone.name }} {{ drone.photo }}</a></li>
     </ul>
