@@ -56,22 +56,22 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'js/views/user/edit.html',
       controller: 'UserEditCtrl as userEdit'
     })
-    .state('raceIndex', {
+    .state('racesIndex', {
       url: '/races',
       templateUrl: 'js/views/races/index.html',
       controller: 'RacesIndexCtrl as racesIndex'
     })
-    .state('raceNew', {
+    .state('racesNew', {
       url: '/races/new',
       templateUrl: 'js/views/races/new.html',
       controller: 'RacesNewCtrl as racesNew'
     })
-    .state('raceShow', {
+    .state('racesShow', {
       url: '/races/:id',
       templateUrl: 'js/views/races/show.html',
       controller: 'RacesShowCtrl as racesShow'
     })
-    .state('raceEdit', {
+    .state('racesEdit', {
       url: '/races/:id/edit',
       templateUrl: 'js/views/races/edit.html',
       controller: 'RacesEditCtrl as racesEdit'

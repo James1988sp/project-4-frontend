@@ -22,7 +22,8 @@
       <ul>
         <li ng-if="main.isAuthenticated()"><a ui-sref="droneIndex" ui-sref-active="active">Drones</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="userIndex" ui-sref-active="active">Users</a></li>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="raceIndex" ui-sref-active="active">Race</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="racesIndex" ui-sref-active="active">Races</a></li>
+        <li ng-if="main.isAuthenticated()"><a ui-sref="racesNew" ui-sref-active="active">Race new</a></li>
         <li ng-if="main.isAuthenticated()"><a ui-sref="userShow({ id: main.currentUser.id })" ui-sref-active="active">Profile</a></li>
         <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
         <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>

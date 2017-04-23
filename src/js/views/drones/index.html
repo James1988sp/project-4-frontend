@@ -13,14 +13,14 @@
         <div class="l-box">
           <input type="checkbox" id="weight" ng-model="dronesIndex.useWeight">
           <label for="weight">Weight</label>
-          <input type="range" ng-model="dronesIndex.weight" min="1" max="500" ng-disabled="!dronesIndex.useWeight">
+          <input type="range" ng-model="dronesIndex.weight" min="1" max="6" ng-disabled="!dronesIndex.useWeight">
         </div>
       </div>
       <div class="pure-u-1 pure-u-sm-1-2">
         <div class="l-box">
           <input type="checkbox" id="speed" ng-model="dronesIndex.useSpeed">
           <label for="speed">Speed</label>
-          <input type="range" ng-model="dronesIndex.speed" min="1" max="500" ng-disabled="!dronesIndex.useSpeed">
+          <input type="range" ng-model="dronesIndex.speed" min="1" max="115" ng-disabled="!dronesIndex.useSpeed">
         </div>
       </div>
     </div>
@@ -30,6 +30,7 @@
       <div class="content pure-g">
         <div ng-repeat="drone in dronesIndex.filtered" class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
           <div class="l-box">
+            <img ng-src="{{ drone.image }}" alt="{{ drone.name }}" class="pure-img">
             <h2>{{ drone.name | uppercase }}</h2>
             <p>Price <strong>{{ drone.price | currency: '£' }}</strong></p>
             <p>Weight <strong>{{ drone.weight }} kg</strong></p>
