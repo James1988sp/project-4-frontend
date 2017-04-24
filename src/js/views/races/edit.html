@@ -2,20 +2,20 @@
 <h1>Edit<span>Race</span></h1>
 <div class="row">
   <div class="col-md-6">
-    <form ng-submit="raceEdit.update()">
+    <form ng-submit="racesEdit.update()">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" ng-model="raceEdit.race.name">
+      <input type="text" id="name" name="name" ng-model="racesEdit.race.name">
       <label for="date">Date</label>
-      <input type="date" id="date" name="date" ng-model="raceEdit.race.date">
+      <input type="date" id="date" name="date" ng-model="racesEdit.race.date">
       <label for="location">Location</label>
-      <input type="text" id="location" name="location" ng-model="raceEdit.race.location">
+      <input type="text" id="location" name="location" ng-model="racesEdit.race.location">
       <label>Attendees</label>
-      <label ng-repeat="user in raceEdit.users">
-        <input type="checkbox" name="attendees" checklist-model="raceEdit.race.attendee_ids"
-      checklist-value="user.id">{{ user.username }}
+      <label ng-repeat="user in racesEdit.users">
+        <input type="checkbox" name="attendees" checklist-model="racesEdit.race.attendee_ids"
+      checklist-value="user.id">{{ user.name }}
       </label>
       <button>Update</button>
     </form>
   </div>
-</div>  
+</div>
 </section>

@@ -109,7 +109,7 @@ function RacesEditCtrl(Race, User, $stateParams, $state) {
     Race
       .update({id: vm.race.id, race: vm.race })
       .$promise
-      .then(() => $state.go('raceShow', { id: vm.race.id }));
+      .then(() => $state.go('racesShow', { id: vm.race.id }));
   }
 
   vm.update = raceUpdate;

@@ -7,13 +7,14 @@
       <option value="-price">Price descending</option>
     </select>
     <input type="text" class="search" ng-model="dronesIndex.q" placeholder="Search...">
+    <br>
 
 
     <input type="checkbox" id="weight" ng-model="dronesIndex.useWeight">
     <label for="weight">Weight</label>
     <input type="range" ng-model="dronesIndex.weight" min="1" max="6" ng-disabled="!dronesIndex.useWeight">
 
-
+    <br>
     <input type="checkbox" id="speed" ng-model="dronesIndex.useSpeed">
     <label for="speed">Speed</label>
     <input type="range" ng-model="dronesIndex.speed" min="30" max="115" ng-disabled="!dronesIndex.useSpeed">
