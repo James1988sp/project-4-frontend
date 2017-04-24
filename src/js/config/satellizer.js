@@ -10,7 +10,7 @@ function Auth($authProvider, API_URL) {
   $authProvider.tokenPrefix = '';
 
   $authProvider.facebook({
-    clientId: '234976903646228',
+    clientId: window.location.hostname === 'localhost' ? '234976903646228' : '234892666987985',
     url: `${API_URL}/oauth/facebook`
   });
 
