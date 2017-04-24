@@ -1,12 +1,12 @@
 <h1><span>Your</span><span>Profile</span></h1>
 <div class="row">
-  <div class="col-md-4">
+  <div class="four columns">
     <img src="{{ usersShow.user.photo }}">
     <li>{{ usersShow.user.name }}</li>
     <li>{{ usersShow.user.nationality }}</li>
   </div>
 
-  <div class="col-md-8">
+  <div class="eight columns">
     <h1>{{ usersShow.user.name }}<span>'s Drones</span></h1>
     <ul>
       <li ng-repeat="drone in usersShow.user.drones"><a ui-sref="droneShow({ id: drone.id })">{{ drone.name }} {{ drone.photo }}</a></li>

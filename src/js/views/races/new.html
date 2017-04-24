@@ -1,21 +1,19 @@
-<section class="container">
 <h1>New<span>Race</span></h1>
 <div class="row">
-  <div class="col-md-6">
+  <div class="six columns">
     <form ng-submit="racesNew.create()">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" ng-model="racesNew.race.name">
+      <input type="text" id="name" name="name" ng-model="racesNew.race.name" class="u-full-width">
       <label for="date">Date</label>
-      <input type="date" id="date" name="date" ng-model="racesNew.race.date">
+      <input type="date" id="date" name="date" ng-model="racesNew.race.date" class="u-full-width">
       <label for="location">Location</label>
-      <input type="text" id="location" name="location" ng-model="racesNew.race.location">
+      <input type="text" id="location" name="location" ng-model="racesNew.race.location" class="u-full-width">
       <label>Attendees</label>
       <label ng-repeat="user in racesNew.users">
         <input type="checkbox" name="attendees" checklist-model="racesNew.race.attendee_ids"
-      checklist-value="user.id">{{ user.username }}
+      checklist-value="user.id">{{ user.name }}
       </label>
       <button>Create</button>
     </form>
   </div>
 </div>
-</section>

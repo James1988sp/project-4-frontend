@@ -1,14 +1,12 @@
-<section class="container">
 <h1><span>Users</span></h1>
 <ul class="row">
-  <li ng-repeat="user in usersIndex.all" class="col-md-6">
+  <li ng-repeat="user in usersIndex.all" class="six columns">
     <div class="user">
       <img ng-src="{{ user.photo }}">
-      <h2>{{ user.name }}</h2>
+      
       <h3>{{ user.nationality }}</h3>
 
-      <a ui-sref="userShow({ id: user.id })">{{ user.name }} {{ user.photo }}</a>
+      <a ui-sref="userShow({ id: user.id })">{{ user.name }}</a>
     </div>
   </li>
 </ul>
-</section>

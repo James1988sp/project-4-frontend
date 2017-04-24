@@ -1,7 +1,6 @@
-<section class="container">
 <h1><span>Races</span></h1>
 <div class="row">
-  <div class="col-md-6">
+  <div class="six columns">
     <div class="race">
       <h2>{{ racesShow.race.name }}<h2>
       <h3>{{ racesShow.race.location }}<h3>
@@ -15,7 +14,7 @@
       <button ng-click="racesShow.delete()" ng-if="main.isAuthenticated() && main.currentUser.id === racesShow.race.user.id">Delete</button>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="six columns">
     <div class="attendees">
       <h5>Attending</h5>
        <ul>
@@ -27,13 +26,13 @@
 
 <div class="comments">
   <div class="row">
-    <div class="col-md-6">
+    <div class="six columns">
       <h2>Comments</h2>
       <ul>
         <li ng-repeat="comment in racesShow.race.comments">{{ comment.body }} - <strong>{{ comment.user.name }}</strong><button ng-click="racesShow.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUser.id === comment.user.id">Delete</button></li>
       </ul>
     </div>
-    <div class="col-md-6" ng-if="main.isAuthenticated()">
+    <div class="six columns" ng-if="main.isAuthenticated()">
       <h2>Add Comment</h2>
       <form ng-submit="racesShow.addComment()">
         <textarea type="text" name="body" ng-model="racesShow.comment.body"></textarea>
@@ -42,4 +41,3 @@
     </div>
   </div>
 </div>
-</section>

@@ -13,25 +13,21 @@
   <!-- endinject -->
 </head>
 <body ng-controller="MainCtrl as main">
-  <nav>
-    <div class="gradient">
-    <div class="pageName">
-      <h1>App<span id="drone">Drone</span>.</h1>
-    </div>
-    <div class="links">
+  <header>
+    <nav class="container">
       <ul>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="droneIndex" ui-sref-active="active">Drones</a></li>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="userIndex" ui-sref-active="active">Users</a></li>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="racesIndex" ui-sref-active="active">Races</a></li>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="racesNew" ui-sref-active="active">Race new</a></li>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="userShow({ id: main.currentUser.id })" ui-sref-active="active">Profile</a></li>
-        <li ng-if="main.isAuthenticated()"><a ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
+        <li><h1>App<span id="drone">Drones</span>.</h1></li>
+        <li ng-if="main.isAuthenticated()"><a  ui-sref="droneIndex" ui-sref-active="active">Drones</a></li>
+        <li ng-if="main.isAuthenticated()"><a  ui-sref="userIndex" ui-sref-active="active">Users</a></li>
+        <li ng-if="main.isAuthenticated()"><a  ui-sref="racesIndex" ui-sref-active="active">Races</a></li>
+        <li ng-if="main.isAuthenticated()"><a  ui-sref="racesNew" ui-sref-active="active">Race new</a></li>
+        <li ng-if="main.isAuthenticated()"><a  ui-sref="userShow({ id: main.currentUser.id })" ui-sref-active="active">Profile</a></li>
+        <li ng-if="main.isAuthenticated()"><a  ng-click="main.logout()" ui-sref-active="active">Logout</a></li>
         <li ng-if="!main.isAuthenticated()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
         <li ng-if="!main.isAuthenticated()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
       </ul>
-    </div>
-  </div>
-  </nav>
+    </nav>
+  </header>
   <main ui-view class="container"></main>
 </body>
 </html>
