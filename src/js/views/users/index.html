@@ -2,8 +2,8 @@
 <ul class="row">
   <li ng-repeat="user in usersIndex.all" class="six columns">
     <div class="user">
-      <img ng-src="{{ user.photo }}">
-      
+      <img ng-src="{{ user.photo }}" class="w3-round">
+
       <h3>{{ user.nationality }}</h3>
 
       <a ui-sref="userShow({ id: user.id })">{{ user.name }}</a>
